@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Amsler Tomás</title>
+    <link rel="icon" type="image/webp" href="assets/img/logo-inicio.webp">
+    
+    <!-- Fuentes del equipo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Vinculación al CSS -->
+    <link rel="stylesheet" href="assets/css/tomas.css">
+</head>
+<body>
+
+    <header>
+        <nav id="nav-menu">
+            <a href="index.html">Inicio</a> <!-- Link obligatorio a la portada grupal -->
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#tarjetas">Proyectos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#peliculas">Cine</a>
+            <a href="#discos">Música</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <!-- Botón hamburguesa para móviles -->
+        <button class="nav-toggle" id="nav-toggle">☰</button>
+    </header>
+
+    <main>
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi">
+            <div class="sobre-mi-texto">
+                <p class="etiqueta">Estudiante IFTS N.° 29</p>
+                <h1>Amsler Tomas</h1>
+                <p class="bio">
+                    <strong>Ubicación:</strong> Santa Fe, Santa Fe <br>
+                    <strong>Edad:</strong> 27 años <br>
+                    Enfocado en la creación y desarrollo de páginas web y bases de datos. 
+                    Especialista en maquetación semántica y desarrollo WordPress.
+                </p>
+                
+                <!-- Interactividad JS -->
+                <button id="btn-interactivo" class="btn">Ver más info</button>
+                <div id="info-extra" style="display: none; margin-top: 1rem;">
+                    <p class="bio">Soy practicante y competidor de Brazilian Jiu Jitsu, lo que me permite trabajar bajo presión y encontrar soluciones a problemas de forma eficiente.</p>
+                </div>
+            </div>
+            <div class="sobre-mi-img">
+                <img src="assets/img/foto_perfil_tomas.jpg" alt="Avatar de Tomas Amsler">
+            </div>
+        </section>
+
+        <!-- Sección Proyectos: -->
+        <section id="tarjetas">
+            <h2 class="seccion-titulo">Proyectos Realizados</h2>
+            <div class="tarjetas-grid">
+                <article class="tarjeta">
+                    <img src="assets/img/proyecto1_tomas.png" alt="E-commerce Global">
+                    <div class="tarjeta-body">
+                        <h3>E-commerce Global</h3>
+                        <p>Tienda online con enfoque en diseño responsivo y UX.</p>
+                        <span class="tag">HTML/CSS</span>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="assets/img/proyecto2_tomas.png" alt="Weather Global">
+                    <div class="tarjeta-body">
+                        <h3>Weather Global</h3>
+                        <p>Consultas de clima en tiempo real mediante integración de APIs.</p>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades">
+            <h2 class="seccion-titulo">Habilidades Técnicas</h2>
+            <div class="habilidades-grid">
+                <div class="habilidad-col">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5 / CSS3 Semántico</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Flexbox y CSS Grid</li>
+                        <li>Maquetación Responsive</li>
+                    </ul>
+                </div>
+                <div class="habilidad-col">
+                    <h3>CMS & Herramientas</h3>
+                    <ul>
+                        <li>WordPress (Plugins y Child Themes)</li>
+                        <li>PHP 7.4 / MySQL</li>
+                        <li>Git / GitHub</li>
+                        <li>Optimización de código</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Películas Favoritas -->
+        <section id="peliculas">
+            <h2 class="seccion-titulo">Cine Favorito</h2>
+            <div class="peliculas-lista">
+                <article class="pelicula">
+                    <img src="assets/img/superbad.jpg" alt="SuperBad">
+                    <div class="pelicula-info">
+                        <h3>SuperBad</h3>
+                        <p>Película de comedia, de las mejores de la época de los 2000'.</p>
+                    </div>
+                </article>
+                <article class="pelicula">
+                    <img src="assets/img/chihiro.jpg" alt="El viaje de Chihiro">
+                    <div class="pelicula-info">
+                        <h3>El viaje de Chihiro</h3>
+                        <p>Película de animación japonesa de Studio Ghibli, de misterio y aventura.</p>
+                    </div>
+                </article>
+                <article class="pelicula">
+                    <img src="assets/img/fightclub.jpg" alt="Fight Club">
+                    <div class="pelicula-info">
+                        <h3>El club de la pelea</h3>
+                        <p>De las mejores películas de acción de la historia, con una mezcla de humor que la hace única.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de Discos: -->
+<section id="discos">
+    <h2 class="seccion-titulo">Discos Favoritos</h2>
+    <div class="tarjetas-grid">
+        
+        <!-- Disco 1: Ismael Serrano -->
+        <article class="tarjeta">
+            <img src="assets/img/hermetica.jpg" alt="Portada Hermetica - Hermetica">
+            <div class="tarjeta-body">
+                <h3>Hermética</h3>
+                <p>Hermética</p>
+                <span class="tag">Heavy Metal</span>
+            </div>
+        </article>
+
+        <!-- Disco 2: Phil Collins -->
+        <article class="tarjeta">
+            <img src="assets/img/cerati.jpg" alt="Portada Amor Amarillo - Gustavo Cerati">
+            <div class="tarjeta-body">
+                <h3>Amor Amarillo</h3>
+                <p>Gustavo Cerati</p>
+                <span class="tag">Rock Nacional</span>
+            </div>
+        </article>
+
+        <!-- Disco 3: The Beatles -->
+        <article class="tarjeta">
+            <img src="assets/img/desintegration.jpg" alt="Desintegration - The Cure">
+            <div class="tarjeta-body">
+                <h3>Desintegration</h3>
+                <p>The Cure</p>
+                <span class="tag">Rock Inglés</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+        <!-- Formulario de Contacto: Adaptado al estilo grupal -->
+        <section id="contacto">
+            <h2 class="seccion-titulo">Contacto</h2>
+            <form action="#" class="form-contacto">
+                <div class="form-fila">
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+                </div>
+                <div class="form-grupo form-grupo-full">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-form">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-copy">
+            &copy; 2026 - Amsler Tomás | IFTS N.° 29
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/TomasAmsler" target="_blank">GitHub</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- Vinculación del script grupal -->
+    <script src="assets/js/tomas.js"></script>
+</body>
+</html>

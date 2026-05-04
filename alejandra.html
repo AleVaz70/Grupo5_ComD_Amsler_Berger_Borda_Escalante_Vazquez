@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandra Vazquez - Integrante</title>
+    <link rel="icon" type="image/webp" href="assets/img/logo-inicio.webp">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/alejandra.css">
+</head>
+<body>
+    <header>
+        <nav id="nav-menu">
+            <a href="index.html">Inicio</a> <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#series">Series</a>
+            <a href="#musica">Música</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <main>
+        <section id="sobre-mi">
+            <div class="sobre-mi-texto">
+                <p class="etiqueta">QA Tester</p>
+                <h1>Alejandra Vazquez</h1>
+                <p class="bio">
+                    <strong>Ciudad:</strong> Cañada de Gómez, Santa Fe <br>
+                    <strong>Edad:</strong> 55 años <br><br>
+                    Apasionada por la calidad del software. Me especializo en asegurar que cada línea de código cumpla con los estándares más altos para el usuario final.
+                </p>
+               
+                <button class="btn" id="btn-interactivo">Más sobre mi perfil</button>
+
+                <div id="info-extra" style="display:none; margin-top:1.5rem;">
+                    <ul class="lista-perfil"></ul>   
+                        <li><strong>QA Manual & Automation:</strong> Ejecución de pruebas funcionales y desarrollo de scripts robustos con Selenium WebDriver.</li>
+                        <li><strong>Mejora Continua:</strong> Optimización de procesos de calidad y gestión eficiente de defectos para garantizar productos confiables.</li>
+                        <li><strong>Misión:</strong> Contribuir a la entrega de software de alto rendimiento, asegurando siempre la mejor experiencia para el usuario final.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sobre-mi-img">
+                <img src="assets/img/foto_perfil_alejandra.jpg" alt="Avatar de Alejandra creado con IA">
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2 class="seccion-titulo">Habilidades</h2>
+            <div class="habilidades-grid">
+                <div class="habilidad-col">
+                    <h3>Core QA</h3>
+                    <ul>
+                        <li>Testing Manual</li>
+                        <li>Pruebas Funcionales</li>
+                        <li>Gestión de Defectos</li>
+                    </ul>
+                </div>
+                <div class="habilidad-col">
+                    <h3>Técnicas</h3>
+                    <ul>
+                        <li>Selenium WebDriver</li>
+                        <li>JavaScript</li>
+                        <li>SQL Básico</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="series">
+            <h2 class="seccion-titulo">Series</h2>
+            <h3 style="color: var(--acento); margin: 2rem 0 1rem;">Series Favoritas</h3>
+            <div class="tarjetas-grid">
+                <div class="tarjeta">
+                    <img src="assets/img/CSI.png" alt="Portada de la serie CSI Las Vegas"> 
+                    <div class="tarjeta-body">
+                        <h3>CSI: Las Vegas</h3>
+                        <p>Investigación forense basada en evidencias y análisis minucioso de detalles.</p>
+                        <span class="tag">Serie</span>
+                     </div>
+                </div>
+                <div class="tarjeta">
+                    <img src="assets/img/House.png" alt="Portada de la serie Dr. House"> 
+                    <div class="tarjeta-body">
+                        <h3>Dr. House</h3>
+                        <p>Análisis deductivo y resolución de casos complejos mediante lógica y observación detallada.</p>
+                        <span class="tag">Serie</span>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <img src="assets/img/Siren.png" alt="Siren’s Kiss">
+                    <div class="tarjeta-body">                                                
+                        <h3>Siren’s Kiss</h3>
+                        <p>Drama y suspenso envolvente.</p>                        
+                        <span class="tag">Serie</span>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <img src="assets/img/Art_Sarah.jpg" alt="The Art of Sarah">
+                    <div class="tarjeta-body">                        
+                        <h3>The Art of Sarah</h3>
+                        <p>Estética visual y narrativa única.</p>                        
+                        <span class="tag">Serie</span>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <img src="assets/img/Mankind.png" alt="For All Mankind">
+                    <div class="tarjeta-body">                        
+                        <h3>For All Mankind</h3>
+                        <p>Exploración espacial alternativa.</p>
+                        <span class="tag">Sci-Fi</span>
+                    </div>
+                </div>               
+            </div>
+        </section>
+
+        <section id="musica">
+            <h2 class="seccion-titulo">Música</h2>
+            <h3 style="color: var(--acento); margin: 3rem 0 1rem;">Discos Favoritos</h3>
+            <div class="tarjetas-grid">
+                <div class="tarjeta">
+                    <img src="assets/img/Charly.png" alt="Parte De La Religión">
+                    <div class="tarjeta-body">                        
+                        <h3>Parte De La Religión</h3>
+                        <p>Charly García</p>
+                    </div>
+                </div>               
+                <div class="tarjeta">
+                    <img src="assets/img/Phil.png" alt="Serious Hits...Live!">
+                    <div class="tarjeta-body">                        
+                        <h3>Serious Hits...Live!</h3>
+                        <p>Phil Collins</p>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-body">
+                        <img src="assets/img/U2.jpg" alt="">
+                        <h3>The Joshua Tree</h3>
+                        <p>U2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+        <section id="contacto">
+            <h2 class="seccion-titulo">Contacto</h2>
+            <form class="form-contacto">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensaje" rows="4" required></textarea>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+  
+    <footer>
+        <p class="copyright">&copy; 2026 - A.V. - IFTS N°29.</p>
+        <div class="redes-sociales">
+            <a href="https://www.linkedin.com/in/" class="link-red" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/" class="link-red" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+       </footer>
+
+    <script src="assets/js/alejandra.js"></script>
+</body>
+</html>

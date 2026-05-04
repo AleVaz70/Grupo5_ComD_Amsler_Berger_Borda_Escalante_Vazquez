@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitácora | Grupo 5</title>
+  <link rel="icon" type="image/webp" href="assets/img/logo-inicio.webp">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/bitacora.css">
+  <script src="https://kit.fontawesome.com/307280f5a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo-inicio.webp" alt="TechVerse logo">
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#decisiones">Decisiones</a></li>
+        <li><a href="#dificultades">Dificultades</a></li>
+        <li><a href="#cambios">Cambios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Bitácora -->
+    <section class="hero-bitacora" aria-label="Bitácora del Proyecto">
+      <div class="hero__content">
+        <h1>Bitácora de Desarrollo</h1>
+        <p>Registro del proceso de creación de nuestro sitio</p>
+      </div>
+    </section>
+
+  
+    <!-- Decisiones de Diseño -->
+    <section id="decisiones" class="bitacora-section">
+      <div class="intro-box">
+        <h2 class="titulo-principal">Decisiones de Diseño</h2>
+        <div class="decision-grid">
+          <div class="decision-card expandable" onclick="toggleCard(this)">
+            <div class="decision-header">
+              <i class="fas fa-palette"></i>
+              <h3>Estética </h3>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="decision-content">
+              <ul class="bitacora-list">
+                <li><strong>Estética Unificada:</strong> Se optó por una base estética común basada en un "Dark Mode" profundo, utilizando una paleta de colores violetas y azulados para transmitir una imagen moderna y tecnológica. </li><br>
+                <li><strong>Tipografía de Contraste:</strong> Se decidió combinar la fuente "Playfair Display" para títulos (aportando elegancia y legibilidad) con "DM Sans" 
+                  para el cuerpo de texto, priorizando la claridad en la lectura.</li><br>
+                <li><strong>Estructura Híbrida:</strong> Se tomó la decisión estratégica de que cada integrante utilizara esta base estética común pero aportara su propia estructura de 
+                  maquetación y selección de contenidos para sus páginas personales. Esto permite que el sitio refleje la personalidad y el enfoque técnico individual 
+                  de cada miembro dentro de un marco visual profesional.</li>
+              </ul>
+
+            </div>
+          </div>
+
+        
+          <div class="decision-card expandable" onclick="toggleCard(this)">
+            <div class="decision-header">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>Responsive Design</h3>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="decision-content">
+              <p>Implementamos breakpoints específicos según los requerimientos:</p>
+              <ul>
+                <li><strong>400px:</strong> Dispositivos móviles pequeños</li>
+                <li><strong>900px:</strong> Tablets y pantallas medianas</li>
+                <li><strong>1200px:</strong> Pantallas de escritorio grandes</li>
+              </ul>
+              <p>Utilizamos CSS Grid y Flexbox para layouts adaptables.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dificultades Encontradas -->
+    <section id="dificultades" class="bitacora-section">
+      <div class="intro-box">
+        <h2 class="titulo-principal">Dificultades y Soluciones</h2>
+        <div class="challenge-list">
+          <div class="challenge-item">
+            <!--<div class="challenge-icon">⚠️</div>-->
+            <div class="challenge-content">
+              <h3>Adaptabilidad del contenido individual</h3>
+              <p><strong>Problema:</strong> Al permitir que cada integrante gestione su propia estructura y contenidos de forma autónoma,
+                 surgieron inconsistencias en la extensión de los textos y los formatos de los elementos. Esto provocaba que, en ciertas resoluciones, el diseño se desbordara o quedaran espacios vacíos antiestéticos, comprometiendo la navegación en dispositivos móviles.</p><br>
+              <p><strong>Solución:</strong> Se implementó un sistema de diseño flexible combinando CSS Grid para la estructura general de las tarjetas y Flexbox para la alineación interna de los elementos. Estas técnicas permitieron que los contenedores se ajusten automáticamente
+                 al volumen de contenido de cada miembro, asegurando que el sitio sea totalmente responsivo y mantenga la armonía visual sin importar la cantidad de información incluida.  </p>
+             </div>
+          </div>
+
+          <div class="challenge-item">
+              <div class="challenge-content">
+              <h3>Sincronización de scripts con la carga del DOM:</h3>
+              <p><strong>Problema:</strong> Al implementar funciones interactivas como el efecto de "scramble" en el título o el efecto magnético en las tecnologías, los scripts intentaban ejecutarse antes de que los elementos HTML estuvieran completamente renderizados en el navegador. 
+                Esto provocaba errores en la consola (como TypeError: cannot read property of null) porque JavaScript no encontraba los selectores de clase como .hero h1 al momento del inicio.</p><br>
+              <p><strong>Solución:</strong> Se implementaron dos estrategias. Primero, se colocó la etiqueta <script src="assets/js/script.js"></script> al final del archivo HTML, justo antes del cierre del </body>, asegurando que el contenido se cargue primero. Segundo, se incluyeron validaciones
+                 preventivas dentro de cada función, como if (!hero || !heading) return;, lo que permite que el código sea robusto.</p>
+            </div>
+          </div>
+
+          <div class="challenge-item">
+              <div class="challenge-content">
+              <h3>Gestión del rendimiento en animaciones de alta frecuencia:</h3>
+              <p><strong>Problema:</strong> El "Efecto Magnético" de la sección de tecnologías requiere calcular la posición del mouse constantemente. El uso de eventos tradicionales como mousemove puede saturar el procesador del navegador si se ejecutan demasiados cálculos por segundo, generando una navegación lenta o "lag".</p><br>
+              <p><strong>Solución:</strong> Se utilizó la técnica de requestAnimationFrame para sincronizar los cálculos matemáticos de las tecnologías con la tasa de refresco del monitor. Esto optimizó el rendimiento, logrando que el movimiento de los iconos sea fluido y no afecte la velocidad de carga ni el desplazamiento (scroll)
+                 del resto del sitio</p>
+            </div>
+          </div>
+
+    </section>
+
+
+    <!-- Cambios Importantes -->
+    <section id="cambios" class="bitacora-section">
+      <div class="intro-box">
+        <h2 class="titulo-principal">Cambios Durante el Desarrollo</h2>
+       
+              <h3>De Estructura Rígida a Flexible</h3>
+              <p>Originalmente se pensó en una plantilla idéntica para todos, pero se cambió hacia un modelo donde cada integrante gestiona su propia sección de manera autónoma, permitiendo mayor libertad creativa en la organización de la información.</p>
+              <br>
+              <h3>Evolución del encabezado</h3>
+              <p>Inicialmente el encabezado era estático, pero se decidió implementar una función de JavaScript que permite cambiar el color del título al hacer clic y alternar frases en distintos idiomas para darle un carácter global al proyecto.</p>
+              <br>         
+              <h3>Transición de Estilos en Tarjetas de Miembros</h3>
+              <p>Originalmente las tarjetas eran estáticas, pero se decidió implementar efectos de transformación 3D (translateY y scale) junto con sombras dinámicas para mejorar la respuesta visual ante la interacción del usuario.</p>
+              <br>
+              <h3>Implementación de Efectos Magnéticos en Tecnologías</h3>
+              <p>Se añadió una función avanzada en JavaScript para la sección de tecnologías, permitiendo que los íconos (HTML, CSS, JS, etc.) sigan sutilmente el movimiento del mouse del usuario. Este cambio se realizó para añadir una capa de profundidad
+                y modernidad al sitio que no estaba contemplada en el diseño inicial.</p>
+      </div>
+    </section>
+
+
+    <!-- Estadísticas del Proyecto -->
+    <section class="stats-section">
+      <h2 class="titulo-principal">Estadísticas del Proyecto</h2>
+      <div class="stats-grid">
+        <div class="stat-card" onclick="animateStat(this)">
+          <div class="stat-number" data-target="7">0</div>
+          <div class="stat-label">Páginas HTML</div>
+        </div>
+        <div class="stat-card" onclick="animateStat(this)">
+          <div class="stat-number" data-target="7">0</div>
+          <div class="stat-label">Archivos CSS</div>
+        </div>
+        <div class="stat-card" onclick="animateStat(this)">
+          <div class="stat-number" data-target="7">0</div>
+          <div class="stat-label">Scripts JS</div>
+        </div>
+        <div class="stat-card" onclick="animateStat(this)">
+          <div class="stat-number" data-target="79">0</div>
+          <div class="stat-label">Imágenes</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Grupo 5 - IFTS Com D | Bitácora de Desarrollo TP1</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/bitacora.js"></script>
+</body>
+</html>
+
+

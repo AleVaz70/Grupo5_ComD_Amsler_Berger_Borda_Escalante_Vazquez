@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio: GIMENA</title>
+    <link rel="icon" type="image/webp" href="assets/img/logo-inicio.webp">
+    <link rel="stylesheet" href="assets/css/gimena.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Logo y navegación -->
+    <header>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#tarjetas">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#peliculas">Series</a>
+        <a href="#musica">Música</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      
+    </header>
+
+    <main>
+      <!-- Presentación personal -->
+      <section id="sobre-mi">
+        <div class="sobre-mi-texto">
+          <p class="etiqueta">Hola, soy</p>
+          <h1>Gimena Escalante</h1>
+          <p>Ubicacion: Santa Fe, Argentina</p>
+          <p>Edad: 25 años</p>
+          <p class="bio">
+           Me interesa el diseño, la tecnología y resolver
+            problemas reales con código limpio y creativo. Mi misión es crecer profesionalmente y
+            construir productos que impacten positivamente a las personas.
+          </p>
+          <a href="#contacto" class="btn">Enviame un mensaje →</a>
+        </div>
+        <div class="sobre-mi-img">
+          
+          <img
+            src="assets/img/foto_perfil_gimena.jpeg"
+            alt="foto"
+          />
+        </div>
+      </section>
+
+      <!-- Tarjetas -->
+      <section id="tarjetas">
+        <h2 class="seccion-titulo">Proyectos</h2>
+        <div class="tarjetas-grid">
+          <article class="tarjeta">
+            <img
+              src="assets/img/ecommerce.jpeg"
+              alt="proyecto1"
+            />
+            <div class="tarjeta-body">
+              <h3>E-commerce App</h3>
+              <p>
+                Tienda online con carrito de compras, filtros y pasarela de
+                pagos. Desarrollada con HTML, CSS y JavaScript vanilla.
+              </p>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img
+              src="assets/img/dashboard.jpeg"
+              alt="proyecto2"
+            />
+            <div class="tarjeta-body">
+              <h3>Dashboard Admin</h3>
+              <p>
+                Panel de administración con gráficos en tiempo real, gestión de
+                usuarios y reportes exportables en PDF.
+              </p>
+              <span class="tag">React</span>
+              <span class="tag">Chart.js</span>
+              <span class="tag">API</span>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img
+              src="assets/img/blog.jpeg"
+              alt="proyecto3"
+            />
+            <div class="tarjeta-body">
+              <h3>Blog Personal</h3>
+              <p>
+                Blog con sistema de comentarios, búsqueda de artículos y modo
+                oscuro. Diseño editorial y tipografía cuidada.
+              </p>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">CSS</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- habilidades y hobbies -->
+      <section id="habilidades">
+        <h2 class="seccion-titulo">Habilidades</h2>
+        <div class="habilidades-grid">
+          <div class="habilidad-col">
+            <h3>Domino:</h3>
+            <ul>
+              <li>HTML5 & CSS3</li>
+              <li>JavaScript</li>
+              <li>Flexbox & Grid</li>
+              <li>Git & GitHub</li>
+              <li>Diseño</li>
+            </ul>
+          </div>
+
+          <div class="habilidad-col">
+            <h3>Aprendiendo:</h3>
+            <ul>
+              <li>React js</li>
+              <li>Node js & Express</li>
+              <li>TypeScript</li>
+              <li>Next js</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+
+          <div class="habilidad-col">
+            <h3>Hobbies:</h3>
+            <ul>
+              <li>Leer</li>
+              <li>Música</li>
+              <li>Series y peliculas</li>
+              <li>Videojuegos</li>
+              <li>Anime</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Películas -->
+      <section id="peliculas">
+        <h2 class="seccion-titulo">Mis películas y series favoritas</h2>
+        <div class="peliculas-lista">
+          <div class="pelicula">
+            <img
+              src="assets/img/dark-serie.jpg"
+              alt= "Dark"
+            />
+            <div class="pelicula-info">
+              <h3>Dark (2017)</h3>
+              <p>
+                Un thriller alemán de ciencia ficción que sigue la desaparición de un niño en un pequeño pueblo, 
+                revelando una compleja red de secretos familiares, viajes en el tiempo y destinos entrelazados.
+              </p>
+            </div>
+          </div>
+
+          <div class="pelicula">
+            <img
+              src="assets/img/game-of-thrones-serie.jpg"
+              alt="game of thrones"
+            />
+            <div class="pelicula-info">
+              <h3>Game of Thrones (2011)</h3>
+              <p>
+                Una épica historia de fantasía donde distintas familias nobles luchan por el control del Trono de Hierro, 
+                en un mundo lleno de traiciones, guerras y criaturas míticas.
+              </p>
+            </div>
+          </div>
+
+          <div class="pelicula">
+            <img
+              src="assets/img/interstellar-movie.jpg"
+              alt="Interstellar"
+            />
+            <div class="pelicula-info">
+              <h3>Interstellar (2014)</h3>
+              <p>
+                Una película que combina ciencia real, emoción humana y escala
+                cósmica. La banda sonora de Hans Zimmer y las actuaciones hacen
+                de este film una experiencia inolvidable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Música -->
+      <section id="musica">
+        <h2 class="seccion-titulo">Mis discos musicales favoritos</h2>
+        <div class="musica-lista">
+          <div class="disco">
+            <img
+              src="assets/img/disco1.jpg"
+              alt= "onedirection-take-me-home"
+            />
+            <div class="disco-info">
+              <h3>One Direction</h3>
+              <h4>Take me Home</h4>
+              <h4>Año: 2012</h4>
+            </div>
+          </div>
+
+          <div class="disco">
+            <img
+              src="assets/img/disco2.jpg"
+              alt= "justinbieber-believe"
+            />
+            <div class="disco-info">
+              <h3>Justin Bieber</h3>
+              <h4>Believe</h4>
+              <h4>Año: 2012</h4>
+            </div>
+          </div>
+
+          <div class="disco">
+            <img
+              src="assets/img/disco3.jpg"
+              alt= "bts"
+            />
+            <div class="disco-info">
+              <h3>BTS</h3>
+              <h4>Arirang</h4>
+              <h4>Año: 2026</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formulario de contacto -->
+      <section id="contacto">
+        <h2 class="seccion-titulo">Contacto</h2>
+        <p class="contacto-sub">
+          Enviame un mensaje.
+        </p>
+        
+        <form action="#" method="POST" class="form-contacto">
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+            <div class="form-grupo">
+              <label for="apellido">Apellido</label>
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                placeholder="Tu apellido"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+                required
+              />
+            </div>
+            <div class="form-grupo">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+54 342 0000000"
+              />
+            </div>
+            <div class="form-grupo form-grupo-full">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje..." rows="5" required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-form">Enviar mensaje →</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Links a redes sociales -->
+    <footer>
+      <p class="footer-copy">© 2026 Gimena Escalante - TP1 | Frontend.</p>
+      <div class="footer-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener"><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener"><img width="48" height="48" src="https://img.icons8.com/color/48/facebook-circled--v1.png" alt="facebook-circled--v1"/></a>
+        <a href="https://github.com" target="_blank" rel="noopener"><img width="48" height="48" src="https://img.icons8.com/color/48/github--v1.png" alt="github--v1"/></a>
+      </div>
+    </footer>
+
+
+    <!-- enlace a js  -->
+    <script src="assets/js/gimena.js"></script>
+  </body>
+</html>

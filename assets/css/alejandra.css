@@ -1,0 +1,345 @@
+/* =======================================================
+   1. VARIABLES Y CONFIGURACIÓN INICIAL
+   ======================================================= */
+:root {
+    --fondo: #0d0d1a;
+    --fondo-2: #16213e;
+    --fondo-3: #1a1a2e;
+    --acento: #e0aaff;
+    --acento-2: #c77dff;
+    --texto: #f0e6ff;
+    --texto-suave: #a89bc2;
+    --borde: rgba(224, 170, 255, 0.15);
+    --radio: 12px;
+    --fuente-titulo: "Playfair Display", serif;
+    --fuente-cuerpo: "DM Sans", sans-serif;
+    --sombra: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --max-ancho: 1100px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente-cuerpo);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulo);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+section[id] {
+    scroll-margin-top: 80px; 
+}
+
+/* =======================================================
+   2. COMPONENTES GLOBALES (BOTONES, LINKS, TÍTULOS)
+   ======================================================= */
+a {
+    color: var(--acento);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--acento-2);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 2px solid var(--acento);
+    color: var(--acento);
+    border-radius: 50px;
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: var(--acento);
+    color: var(--fondo);
+    transform: translateY(-2px);
+}
+
+.seccion-titulo {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--acento);
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.seccion-titulo::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: var(--acento-2);
+    margin-top: 0.4rem;
+    border-radius: 2px;
+}
+
+/* =======================================================
+   3. NAVEGACIÓN Y HEADER
+   ======================================================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 5%;
+    background: rgba(13, 13, 26, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--borde);
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--texto-suave);
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--acento);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* =======================================================
+   4. SECCIONES PRINCIPALES
+   ======================================================= */
+main > section {
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+    padding: 5rem 5%;
+}
+
+/* SOBRE MÍ */
+#sobre-mi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    min-height: 80vh;
+    padding: 80px 5% 50px;
+}
+
+.sobre-mi-texto { flex: 1; min-width: 300px; }
+
+.etiqueta {
+    font-size: 1rem;
+    color: var(--acento);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.sobre-mi-texto h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1.2rem;
+}
+
+.bio {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin-bottom: 2rem;
+}
+
+.sobre-mi-img {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin-top 0.4s ease;
+}
+
+.sobre-mi-img img {
+    width: min(360px, 90vw);
+    border-radius: var(--radio);
+}
+
+/* CLASES PARA INTERACTIVIDAD JS */
+.foto-desplazada { margin-top: 10rem; }
+.foto-desplazada img { transform: translateY(50px); }
+
+/* TARJETAS (Series y Música) */
+#tarjetas, #peliculas {
+    background: var(--fondo-3);
+    border-radius: var(--radio);
+    margin: 2rem auto !important;
+}
+
+#musica {
+    background: transparent; 
+    margin: 2rem auto !important;
+}
+
+.tarjetas-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.tarjeta {
+    flex: 0 1 280px;
+    background: var(--fondo-2);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; 
+    max-width: 280px;    
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(199, 125, 255, 0.25);
+    border-color: var(--acento);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.tarjeta-body {
+    padding: 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tag { margin-top: auto; align-self: flex-start; }
+
+/* HABILIDADES */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.habilidad-col {
+    background: var(--fondo-2);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 1.8rem;
+}
+
+/* =======================================================
+   5. FORMULARIO DE CONTACTO Y FOOTER
+   ======================================================= */
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-contacto input, .form-contacto textarea {
+    padding: 1rem;
+    background: var(--fondo-2);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    color: white;
+    font-family: var(--fuente-cuerpo);
+    width: 100%;
+    outline: none;
+}
+
+.form-contacto input:focus, .form-contacto textarea:focus {
+    border-color: var(--acento);
+    box-shadow: 0 0 0 3px rgba(224, 170, 255, 0.15);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    border-top: 1px solid var(--borde);
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+}
+
+.redes-sociales { display: flex; gap: 1.5rem; }
+
+/* =======================================================
+   6. RESPONSIVE DESIGN (Ajustado a 1200, 900 y 400)
+   ======================================================= */
+
+/* Desktop / Pantallas Grandes (max-width: 1200px) */
+@media (max-width: 1200px) {
+    #sobre-mi { gap: 3rem; }
+    .sobre-mi-texto h1 { font-size: 4rem; }
+}
+
+/* Tablets y Pantallas Medianas (max-width: 900px) */
+@media (max-width: 900px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; width: 100%;
+        flex-direction: column;
+        background: var(--fondo-3);
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--borde);
+    }
+    nav.open { display: flex; }
+    .nav-toggle { display: block; }
+    #sobre-mi { flex-direction: column-reverse; text-align: center; gap: 2.5rem; }
+    .sobre-mi-img img { width: 300px; }
+    .tarjetas-grid { justify-content: center; }
+}
+
+/* Móviles (max-width: 400px) */
+@media (max-width: 400px) {
+    main > section { padding: 3rem 5%; }
+    .tarjetas-grid { flex-direction: column; align-items: center; gap: 1.2rem; }
+    .tarjeta { max-width: 280px; }
+    .seccion-titulo { display: block; text-align: center; font-size: 1.6rem; }
+    .seccion-titulo::after { margin: 0.4rem auto 0; }
+    .sobre-mi-texto h1 { font-size: 2.2rem; }
+}

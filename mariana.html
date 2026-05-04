@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es"> <head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Mariana Borda</title> 
+    <link rel="icon" type="image/webp" href="assets/img/logo-inicio.webp">
+    <!-- Google Fonts -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/mariana.css"> </head>
+<body>
+
+    <header> 
+        <nav id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#peliculas">Cine</a>
+        <a href="#discos">Música</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle">☰</button>
+</header>
+<main>
+        <section id="sobre-mi"> <div class="perfil-header">
+                <img src="assets/img/foto_perfil_mariana.jpg" alt="Foto de Mariana Borda" class="foto-perfil"> <div class="info-principal">
+                    <h1>Mariana Borda</h1> <p class="puesto">Estudiante de Desarrollo de Software</p>
+                    <p>Rosario, Santa Fe</p> <p>45 años</p> </div>
+            </div>
+            <div class="descripcion">
+                <h2>Sobre mí</h2>
+                <p>Soy Desarrolladora de Software en formación, actualmente cursando la Tecnicatura Superior en Desarrollo de Software.</p>
+           
+                <p>Mi objetivo es desarrollar mi carrera en el sector IT, participando en proyectos que requieran altos estándares de confiabilidad, estabilidad y calidad, especialmente en entornos críticos donde la continuidad operativa y la precisión de los procesos son fundamentales.</p>
+                    
+                <p>Me distingo por mi compromiso, capacidad analítica, aprendizaje constante y orientación a resultados; cualidades que me permiten adaptarme con rapidez a nuevos desafíos, integrarme en equipos de trabajo y aportar valor en entornos exigentes.</p> 
+            </div>
+        </section>
+    
+
+    
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="tags-container">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+            </div>
+        </section>
+
+        <section id="peliculas" class="desplegable">
+            <div class="header-desplegable" onclick="toggleSection('lista-peliculas', 'arrow-pelis')">
+                <h2>🎬 Películas Favoritas</h2>
+                <span id="arrow-pelis" class="arrow">▼</span>
+            </div>
+            <div id="lista-peliculas" class="contenido-oculto">
+                <div class="grid-items">
+                    <div class="item">
+                        <img src="assets/img/Inception.jpg" alt="Inception">
+                        <h3>Inception (El origen)</h3>
+                        <p>Dirigida por Christopher Nolan, sigue a un grupo de especialistas que se introducen en los sueños de las personas para robar o
+                           implantar ideas en su subconsciente. La historia se centra en Dom Cobb (Leonardo DiCaprio), quien acepta una misión extremadamente 
+                           compleja: realizar una “inception”, es decir, implantar una idea en la mente de alguien. La película combina acción, ciencia ficción
+                           y drama psicológico, jugando con distintos niveles de sueño y la percepción del tiempo.</p>               
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/img/en-busca-de-la-felicidad.jpg" alt="En busca de la felicidad">
+                        <h3>The Pursuit of Happyness (En busca de la felicidad)</h3>
+                        <p>Cuenta la historia real de Chris Gardner, un hombre que enfrenta la pobreza extrema mientras cría solo a su hijo. A pesar de quedarse sin hogar, lucha por salir adelante realizando una pasantía no remunerada con la esperanza de conseguir un empleo estable. La película pone el foco 
+                           en la perseverancia, el sacrificio y el amor entre padre e hijo.</p>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/Interstellar.png" alt="Interstellar">
+                        <h3>Interstellar</h3>
+                        <p>Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para
+                           encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida
+                           allí. La Tierra está llegando a su fin y este grupo necesita encontrar un planeta más allá de nuestra galaxia
+                           que garantice el futuro de la raza humana.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="discos" class="desplegable">
+            <div class="header-desplegable" onclick="toggleSection('lista-discos', 'arrow-discos')">
+                <h2>🎵 Discos Favoritos</h2>
+                <span id="arrow-discos" class="arrow">▼</span>
+            </div>
+            <div id="lista-discos" class="contenido-oculto">
+                <div class="grid-items">
+                    <div class="item">
+                        <img src="assets/img/Courage.png" alt="Celine Dion">
+                         <h3>Courage - Celine Dion</h3>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/ahí-vamos.png" alt="Gustavo Cerati">
+                        <h3>Ahí vamos - Gustavo Cerati</h3>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/moon-music.png" alt="Coldplay">
+                        <h3>Moon Music - Coldplay</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="form-contacto">
+                <div class="input-group">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Apellido" required>
+                </div>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Teléfono" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+        
+    <footer> <p>&copy; 2026 Mariana Borda</p>
+    </footer>
+
+    <script src="assets/js/mariana.js"></script>
+</body>
+</html>
