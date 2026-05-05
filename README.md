@@ -447,6 +447,6 @@ Nos pusimos de acuerdo en utilizar una imagen real con el siguiente prompt: "Rec
 
 ### Enlaces
 
-**Repositorio GitHub**: [\[link al repo\] ](https://github.com/)
+**Repositorio GitHub**: [\[link al repo\] ](https://github.com/AleVaz70/Grupo5_ComD_Amsler_Berger_Borda_Escalante_Vazquez)
 
-**Deploy en Vercel**: [\[link al sitio\] ](https://)
+**Deploy en Vercel**: [\[link al sitio\] ](https://grupo5-com-d-amsler-berger-borda-es-one.vercel.app)
